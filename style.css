@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3% 5%;
+  z-index: 10;
+}
+
+.navbar__brand {
+  width: 100px;
+  height: 100%;
+}
+
+.brand__logo {
+  width: 100%;
+  height: 100%;
+}
+
+.language__drop__down {
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+.language__drop__down:focus {
+  outline: none;
+}
+
+.dropdown__container {
+  border: 1px solid white;
+  padding: 0.4rem;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.signin__button {
+  background-color: #dc030f;
+  border: 1px solid #dc030f;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.navbar__nav__items {
+  display: flex;
+  gap: 10px;
+}
+
+.hero__bg__image__container {
+  width: 100%;
+  height: 80vh;
+}
+
+.hero__bg__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__bg__overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 80vh;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.hero__card {
+  position: absolute;
+  top: 20%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero__title {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.hero__subtitle,
+.hero__description {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.hero__description {
+  margin: 0 50px;
+}
+
+.email__input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  padding-left: 7px;
+}
+.email__label {
+  color: black;
+  position: absolute;
+  top: 28%;
+  left: 2%;
+  color: rgb(153, 149, 149);
+  transition: 0.5s;
+}
+
+.email__form__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.form__container {
+  background-color: white;
+  width: 90%;
+  height: 50px;
+  position: relative;
+}
+
+.email__input:focus + .email__label {
+  top: 0.2rem;
+  font-size: 10px;
+}
+
+.email__input:not(:placeholder-shown).email__input:not(:focus) + .email__label {
+  top: 0.2rem;
+  font-size: 10px;
+}
+
+.email__input:focus-visible {
+  outline: none;
+}
+
+.primary__button {
+  background-color: #dc030f;
+  border: 1px solid #dc030f;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 2px;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 768px) {
+  .hero__bg__image__container {
+    height: 100vh;
+  }
+
+  .hero__bg__overlay {
+    height: 100vh;
+  }
+  .hero__card {
+    top: 40%;
+    left: 30%;
+    transform: translate(-20%, -20%);
+  }
+  .hero__title {
+    font-size: 3rem;
+  }
+  .hero__subtitle,
+  .hero__description {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 2% 5%;
+  }
+
+  .navbar__brand {
+    width: 150px;
+  }
+
+  .signin__button {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+  .dropdown__container {
+    padding: 10px 5px;
+  }
+
+  .navbar__nav__items {
+    gap: 30px;
+  }
+
+  .hero__card {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .form__container {
+    width: 50%;
+  }
+  .email__form__container {
+    flex-direction: row;
+    align-items: center;
+    gap: 1px;
+  }
+  .primary__button {
+    height: 50px;
+  }
+}
+
+@media (min-width: 1254px) {
+}
